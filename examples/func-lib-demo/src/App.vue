@@ -6,6 +6,8 @@
     <button @click="throttle">throttle</button>
     <button @click="deepClone">deepClone</button>
     <button @click="deepMerge">deepMerge</button>
+    <button @click="shuffle">Shuffle</button>
+    <button @click="timeFormat">timeFormat</button>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
@@ -77,6 +79,21 @@ export default {
       console.log("obj", obj)
       console.log("assign", assign)
       console.log("assign2", assign2)
+    },
+    shuffle(){
+      // let array = [1,2,3,4,5,6,7,8,9]
+      let array = [
+        {name: 1},
+        {name: 2},
+        {name: 3},
+        {name: 4},
+        {name: 5}
+      ]
+      let newarr = this.$arrayShuffle(array)
+      console.log(newarr);
+    },
+    timeFormat(){
+      console.log(this.$timeFormat(1638117622776, "yyyy/mm/dd hh:MM"));
     }
   },
 }

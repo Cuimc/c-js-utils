@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-import func from "c-func-lib"
+import func from "../../../index"
 Vue.use(func)
 
 Vue.config.productionTip = false
