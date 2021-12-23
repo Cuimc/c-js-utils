@@ -4,6 +4,7 @@ import deepClone from "./lib/deepClone"
 import deeepMerge from "./lib/deepMerge"
 import arrayShuffle from "./lib/arrayShuffle"
 import timeFormat from "./lib/timeFormat"
+import checkType from "./lib/checkType"
 
 
 const func = {
@@ -14,6 +15,7 @@ const func = {
         Vue.prototype.$deepMerge = deeepMerge
         Vue.prototype.$arrayShuffle = arrayShuffle
         Vue.prototype.$timeFormat = timeFormat
+        Vue.prototype.$checkType = checkType
     }
 }
 

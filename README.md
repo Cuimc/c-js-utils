@@ -9,6 +9,7 @@
 - 深度合并
 - 数组洗牌
 - 时间戳转时间格式
+- 判断数据类型
 
 ### 如何使用
 vue2
@@ -72,4 +73,23 @@ Vue.use(func)
     MM => 分
     ss => 秒
     // 可以自由组合
+```
+- 判断数据类型
+```javascript
+    let type = this.$checkType(obj)
+    
+    // obj 是要判断的数据
+    /**
+     * 可供判断的数据类型
+     * 'boolean',
+     * 'number',
+     * 'string',
+     * 'function',
+     * 'array',
+     * 'date',
+     * 'regExp',
+     * 'undefined',
+     * 'null',
+     * 'object'
+     */ 
 ```

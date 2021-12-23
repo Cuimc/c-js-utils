@@ -1,6 +1,6 @@
 {
   "name": "c-js-utils",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "自用的js的方法库",
   "main": "index.js",
   "scripts": {

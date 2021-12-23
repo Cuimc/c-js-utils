@@ -8,6 +8,7 @@
     <button @click="deepMerge">deepMerge</button>
     <button @click="shuffle">Shuffle</button>
     <button @click="timeFormat">timeFormat</button>
+    <button @click="checktype">checktype</button>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
@@ -94,6 +95,14 @@ export default {
     },
     timeFormat(){
       console.log(this.$timeFormat(1638117622776, "yyyy/mm/dd hh:MM"));
+    },
+
+    checktype(){
+      let string = "qwe"
+      let obj = [
+        1,2,3
+      ]
+      console.log(this.$checkType(obj))
     }
   },
 }
