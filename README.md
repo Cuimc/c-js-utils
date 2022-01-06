@@ -12,17 +12,25 @@
 - 判断数据类型
 
 ### 如何使用
-vue2
+目前兼容了Vue2 与 Vue3
+
 ```javescript
 // 首先安装
 npm install --save c-js-utils 
 or
 cnpm install --save c-js-utils 
 
+// Vue2 
+    // main.js中添加代码
+    import func from c-js-utils
+    Vue.use(func)
 
-// main.js中添加代码
-import func from c-js-utils
-Vue.use(func)
+// Vue3
+    // main.js中添加代码
+    import func from c-js-utils
+    
+    const app = createApp()
+    app.use(func).mount("#app")
 ```
 
 ### 方法文档

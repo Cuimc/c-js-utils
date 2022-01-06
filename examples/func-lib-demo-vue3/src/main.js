@@ -1,4 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import func from "../../../index"
 
-createApp(App).mount('#app')
+const app = createApp(App)
+
+app.use(func).mount('#app')
