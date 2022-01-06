@@ -14,7 +14,7 @@
 ### 如何使用
 目前兼容了Vue2 与 Vue3
 
-```javescript
+```js
 // 首先安装
 npm install --save c-js-utils 
 or
@@ -25,12 +25,24 @@ cnpm install --save c-js-utils
     import func from c-js-utils
     Vue.use(func)
 
+    // 然后再页面中就可以使用了
+    this.$debounce(func)
+
 // Vue3
     // main.js中添加代码
     import func from c-js-utils
-    
+
     const app = createApp()
     app.use(func).mount("#app")
+
+    // 由于vue3 与 vue2 的方法不同, 这里只介绍 composition Api 的用法
+    import { getCurrentInstance } from "vue"
+    export default {
+        setup(){
+            const { proxy } = getCurrentInstance()  // 将proxy解构出来   关键代码!!!
+            proxy.$debounce(func)  // 使用方法
+        }
+    }
 ```
 
 ### 方法文档
